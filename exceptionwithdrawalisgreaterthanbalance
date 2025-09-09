@@ -1,0 +1,10 @@
+balance = float(input("Enter your account balance: "))
+withdrawal = float(input("Enter withdrawal amount: "))
+try:
+    if withdrawal > balance:
+        raise Exception("Withdrawal amount exceeds balance ")
+    else:
+        balance -= withdrawal
+        print(f"Transaction successful. Remaining balance: ₹{balance}")
+except Exception as e:
+    print(e)
