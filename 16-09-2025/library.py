@@ -9,7 +9,7 @@ load_dotenv()
 url = os.getenv("SUPABASE_URL")
 key = os.getenv("SUPABASE_KEY")
 if not url or not key:
-    print("❌ Please set SUPABASE_URL and SUPABASE_KEY in .env")
+    print(" Please set SUPABASE_URL and SUPABASE_KEY in .env")
     exit(1)
 
 supabase: Client = create_client(url, key)
@@ -202,7 +202,8 @@ def main():
             print("👋 Exiting...")
             break
         else:
-            print("❌ Invalid choice, try again.")
+            print(" Invalid choice, try again.")
 
 if __name__ == "__main__":
     main()
+
